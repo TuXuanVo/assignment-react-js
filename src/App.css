@@ -1,0 +1,37 @@
+body {
+	font-size: 12px;
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+}
+
+.primayBtn {
+	background-color: #00b9ef;
+	border-radius: 5px;
+	padding: 15px 30px;
+	border: 1px solid #00b9ef;
+	color: white;
+}
+
+.impressTextOrange {
+	color: #ff9900;
+	font-weight: 700;
+	padding: 0 10px;
+}
+
+.impressTextBlue {
+	color: #00b9ef;
+	font-weight: 700;
+	padding: 0 10px;
+}
+
+.featureJobsItem {
+	display: flex;
+	border-radius: 10px;
+	padding: 16px;
+	box-shadow: 0px 0px 24px rgba(0, 25, 54, 0.1);
+	margin-bottom: 10px;
+}
+
+.warningText {
+	color: red;
+}

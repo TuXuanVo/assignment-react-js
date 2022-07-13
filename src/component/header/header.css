@@ -1,0 +1,92 @@
+.header {
+	display: flex;
+	padding: 8px 50px;
+	justify-content: space-between;
+}
+
+.headerRight {
+	display: flex;
+	align-items: center;
+}
+
+.superRadiusBtn {
+	background-color: #00b9ef;
+	color: white;
+	font-weight: 500;
+	padding: 3px 5px;
+	border-radius: 20px;
+}
+
+.narBar span:first-child {
+	padding-left: 0;
+}
+
+.headerRight span {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.language {
+	margin-left: 20px;
+}
+
+.activePage {
+	font-weight: 500;
+	color: #00b9ef;
+}
+
+.language span {
+	padding: 0;
+}
+
+.language {
+	border: #dae5f2 solid 0.5px;
+	border-radius: 20px;
+	padding: 3px 10px;
+}
+
+.activeLanguage {
+	color: #dae5f2;
+}
+
+.iconMenu {
+	background-color: #f7fbff;
+	border: #dae5f2 solid 1px;
+	border-radius: 8px;
+	padding: 5px 7px;
+	display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+	.header {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.headerRight span {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.language {
+		border: #dae5f2 solid 0.5px;
+		border-radius: 20px;
+		padding: 3px 5px;
+	}
+	.language span {
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.header {
+		padding: 10px 25px;
+	}
+	.narBar,
+	.login,
+	.language {
+		display: none;
+	}
+	.iconMenu {
+		display: block;
+		margin-left: 20px;
+	}
+}

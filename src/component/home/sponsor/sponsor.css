@@ -1,0 +1,38 @@
+.sponsor {
+	padding-bottom: 93px;
+}
+
+.sopnsorTitle {
+	font-size: 2rem;
+	text-align: center;
+	padding-top: 56px;
+	padding-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.imgSponsor {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+
+.imgSponsor img {
+	margin: 0 25px;
+}
+
+@media only screen and (max-width: 768px) {
+	.imgSponsor {
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+	.imgSponsor img {
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	.imgSponsor img {
+		margin: 0 0 15px 0;
+	}
+}

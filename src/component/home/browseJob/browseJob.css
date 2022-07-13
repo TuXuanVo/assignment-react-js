@@ -1,0 +1,36 @@
+.browseJobs {
+	background: url("../../../../public/img/BG-brower-job.png") center;
+}
+
+.browseJobsTitle {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	font-size: 1.8rem;
+}
+
+.jobPositions {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 30px;
+}
+
+.positionsLeft div {
+	margin-right: 8px;
+}
+
+.positionsRight div {
+	margin-left: 8px;
+}
+
+@media only screen and (max-width: 576px) {
+	.jobPositions {
+		display: grid;
+	}
+	.positionsLeft div {
+		margin-right: 0px;
+	}
+	.positionsRight div {
+		margin-left: 0px;
+	}
+}

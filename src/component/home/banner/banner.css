@@ -1,0 +1,96 @@
+.banner {
+	background: url("../../../../public/img/background.png") center;
+	height: 430px;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+
+.banner::before {
+	position: absolute;
+	inset: 0;
+	background-color: #02203a;
+	opacity: 0.8;
+	content: "";
+	z-index: 0;
+}
+
+.banner p {
+	font-size: 2rem;
+	font-weight: 800;
+	text-align: center;
+	color: white;
+}
+
+.banner > div {
+	z-index: 1;
+}
+
+.searchBox {
+	z-index: 1;
+}
+
+.searchBox span {
+	color: white;
+	margin-bottom: 4px;
+	display: inline-block;
+}
+
+.itemSearchBox input {
+	width: 500px;
+	border: #dae5f2 solid 1px;
+	border-radius: 4px;
+	padding: 15px;
+	margin-right: 5px;
+}
+
+@media only screen and (max-width: 992px) {
+	.banner {
+		height: 300px;
+	}
+	.banner p {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.banner {
+		height: 300px;
+	}
+	.banner p {
+		margin: 0.5rem 0;
+	}
+	.itemSearchBox input {
+		width: 300px;
+		padding: 10px;
+	}
+	.primayBtn {
+		padding: 10px 15px;
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	.banner {
+		justify-content: space-around;
+	}
+	.banner p {
+		font-size: 1.8rem;
+	}
+	.itemSearchBox {
+		display: grid;
+	}
+	.itemSearchBox p {
+		font-size: 1rem;
+	}
+	.itemSearchBox input {
+		width: 200px;
+		margin-bottom: 5px;
+	}
+	.itemSearchBox button {
+		width: 222px;
+	}
+}

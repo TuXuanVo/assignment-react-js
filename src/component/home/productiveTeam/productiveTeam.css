@@ -1,0 +1,42 @@
+.productiveTeam {
+	margin-top: 70px;
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.imgProductiveTeam {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 70px;
+}
+
+@media only screen and (max-width: 992px) {
+	.imgProductiveTeam {
+		margin: 0 50px;
+		display: grid;
+		grid-template-columns: 30% 30% 30%;
+	}
+	.imgProductiveTeam img {
+		margin: 0 25px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.imgProductiveTeam {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	.imgProductiveTeam {
+		display: flex;
+		flex-direction: column;
+	}
+	.imgProductiveTeam img {
+		margin-bottom: 15px;
+	}
+}

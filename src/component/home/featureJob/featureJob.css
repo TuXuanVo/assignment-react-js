@@ -1,0 +1,56 @@
+.featureJobsTitle {
+	font-size: 1.8rem;
+	text-align: center;
+	padding-top: 56px;
+	padding-bottom: 40px;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: 32% 32% 32%;
+	justify-content: space-between;
+	margin: 0 50px;
+}
+
+.moreJobText {
+	font-size: 1.5rem;
+	color: #00428e;
+}
+
+.moreJobTextBold {
+	font-size: 1.5rem;
+	color: #00428e;
+	font-weight: 700;
+}
+
+.featureJobsItemMore {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	border-radius: 10px;
+	padding: 16px;
+	margin-bottom: 10px;
+	background-color: #dae5f2;
+}
+
+@media only screen and (max-width: 992px) {
+	.row {
+		display: grid;
+		grid-template-columns: 48% 48%;
+		justify-content: space-between;
+		margin: 0 50px;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.row {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	.row {
+		margin: 0 10px;
+	}
+}

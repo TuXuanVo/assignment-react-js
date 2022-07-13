@@ -1,0 +1,21 @@
+.inputItem {
+	margin-bottom: 22px;
+	display: flex;
+	flex-direction: column;
+}
+.inputItem h4 {
+	margin: 4px 0;
+	font-weight: 600;
+}
+
+.inputItem input {
+	border: 1px solid #dae5f2;
+	border-radius: 4px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 16px;
+}
+
+.inputItem input:focus {
+	outline: 1px solid #dae5f2;
+}
