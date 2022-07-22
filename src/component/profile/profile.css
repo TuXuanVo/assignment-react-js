@@ -1,0 +1,32 @@
+.QRComponet {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.QRForm {
+	display: flex;
+	flex-direction: column;
+}
+
+.QRInput {
+	border: 1px solid #dae5f2;
+	border-radius: 4px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 16px;
+	margin-bottom: 20px;
+}
+
+.QRInput:focus {
+	outline: 1px solid #dae5f2;
+}
+
+.QRButton {
+	padding: 5px 0;
+	font-size: 1rem;
+	background-color: #00b9ef;
+	border-radius: 5px;
+	border: 1px solid #00b9ef;
+	color: white;
+}

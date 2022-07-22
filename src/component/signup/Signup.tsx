@@ -18,8 +18,8 @@ function Signup() {
 			email: "",
 			password: "",
 			rePassword: "",
-			subcribe: false,
-			acceptTerm: false,
+			isSubcribe: false,
+			isAcceptTerm: false,
 		},
 		validationSchema: Yup.object().shape({
 			role: Yup.string().required("Please choose role"),
@@ -35,13 +35,31 @@ function Signup() {
 						"charactor and the length greater than 8"
 				),
 			rePassword: Yup.string().oneOf([Yup.ref("password"), null], "Passwords must match"),
-			acceptTerm: Yup.bool().isTrue("You must accept term of Use"),
+			isAcceptTerm: Yup.bool().isTrue("You must accept term of Use"),
 		}),
-		onSubmit: (values) => {
+		onSubmit: async (values) => {
 			// alert(JSON.stringify(values, null, 2));
 			console.log(values);
-			saveUser(values);
-			navigate(`/profile`);
+			// saveUser(values);
+			try {
+				await fetch("http://localhost:5000/", {
+					method: "POST",
+					headers: {
+						"Content-type": "application/json; charset=UTF-8",
+					},
+					body: JSON.stringify({
+						name: values.name,
+						email: values.email,
+						password: values.password,
+						isSubcribe: values.isSubcribe,
+						isAcceptTerm: values.isAcceptTerm,
+					}),
+				});
+
+				navigate(`/profile`);
+			} catch (error) {
+				console.log(error);
+			}
 		},
 	});
 	return (
@@ -124,23 +142,23 @@ function Signup() {
 						<div className="checkboxItem">
 							<input
 								type="checkbox"
-								name="subcribe"
-								id="subcribe"
+								name="isSubcribe"
+								id="isSubcribe"
 								onChange={formik.handleChange}
 							/>
-							<label htmlFor="subcribe">Subscribe to news letter</label>
+							<label htmlFor="isSubcribe">Subscribe to news letter</label>
 						</div>
 						<div className="checkboxItem">
 							<input
 								type="checkbox"
-								name="acceptTerm"
-								id="acceptTerm"
+								name="isAcceptTerm"
+								id="isAcceptTerm"
 								onChange={formik.handleChange}
 							/>
-							<label htmlFor="acceptTerm">I accept Term of Use</label>
+							<label htmlFor="isAcceptTerm">I accept Term of Use</label>
 						</div>
-						{formik.touched.acceptTerm && formik.errors.acceptTerm ? (
-							<div className="warningText">{formik.errors.acceptTerm}</div>
+						{formik.touched.isAcceptTerm && formik.errors.isAcceptTerm ? (
+							<div className="warningText">{formik.errors.isAcceptTerm}</div>
 						) : null}
 					</div>
 					<button type="submit" className="primayBtn signupBtn">

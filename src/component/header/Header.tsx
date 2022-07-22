@@ -18,7 +18,9 @@ function Header() {
 					<span>Notification</span>
 				</div>
 				<div className="login">
-					<span>Login</span>
+					<span>
+						<Link to="/login">Login</Link>
+					</span>
 					<Link to="/signup" className="superRadiusBtn">
 						Signup
 					</Link>

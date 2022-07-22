@@ -22,7 +22,15 @@ const UserProvider: React.FC<ReactProps> = ({ children }) => {
 		setUser(user);
 	};
 
-	return <UserContext.Provider value={{ user, saveUser }}>{children}</UserContext.Provider>;
+	const [email, setEmail] = React.useState<string>("");
+
+	const saveEmail = (email: string) => {
+		setEmail(email);
+	};
+
+	return (
+		<UserContext.Provider value={{ user, email, saveUser, saveEmail }}>{children}</UserContext.Provider>
+	);
 };
 
 export default UserProvider;
