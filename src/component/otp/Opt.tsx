@@ -1,18 +1,18 @@
-import "./profile.css";
+import "./otp.css";
 import { UserContextType } from "../../@type/user";
 import { useContext, useState } from "react";
 import { UserContext } from "../../context/userContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-function Profile() {
+function Otp() {
 	const { email } = useContext(UserContext) as UserContextType;
 	const [imgUrl, setImgUrl] = useState("");
 	const [token, setToken] = useState("");
 	const navigate = useNavigate();
 
 	axios
-		.post(`${process.env.REACT_APP_API_URL}/auth/qrcode`, {
+		.post(`${process.env.REACT_APP_API_URL_GET_QRCODE_OTP}`, {
 			email,
 		})
 		.then((response) => response.data)
@@ -26,7 +26,7 @@ function Profile() {
 	const handleSubmit = (event: any) => {
 		event.preventDefault();
 		axios
-			.post(`${process.env.REACT_APP_API_URL}/auth/verifyQR`, {
+			.post(`${process.env.REACT_APP_API_URL_VERIFY_OTP}`, {
 				token,
 			})
 			.then((response) => response.data)
@@ -63,4 +63,4 @@ function Profile() {
 	);
 }
 
-export default Profile;
+export default Otp;

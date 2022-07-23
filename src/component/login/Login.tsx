@@ -29,7 +29,7 @@ function Login() {
 		onSubmit: async (values) => {
 			console.log(process.env);
 			axios
-				.post(`${process.env.REACT_APP_API_URL}/auth/signin`, {
+				.post(`${process.env.REACT_APP_API_URL_SIGNIN}`, {
 					username: values.username,
 					password: values.password,
 					tokenCaptcha: token,
@@ -52,7 +52,7 @@ function Login() {
 	}, []);
 
 	return (
-		<GoogleReCaptchaProvider reCaptchaKey="6LcTxAkhAAAAAO_I5PnTUGykKaG8iyIb1yx9ot0u">
+		<GoogleReCaptchaProvider reCaptchaKey={`${process.env.REACT_APP_PUBLIC_CAPTCHA_KEY}`}>
 			<form onSubmit={formik.handleSubmit}>
 				<div className="signup">
 					<div className="signupContent">
